@@ -42,6 +42,7 @@ const Index = () => {
             value={currentState}
             onChange={handleChange}
             onBlur={handleChange}
+            id="state-select"
           >
             {Rules.rules.map((s, ind) => {
               return (
@@ -59,7 +60,9 @@ const Index = () => {
           <section className="status">
             <dl className="large">
               <dt>Can you vote by mail?</dt>
-              <dd>{currentRules.status ? "Yes" : "No"}</dd>
+              <dd>
+                <h1>{currentRules.status ? "Yes" : "No"}</h1>
+              </dd>
             </dl>
 
             {currentRules.excuseRequired && (
@@ -134,10 +137,16 @@ const Index = () => {
 
       <footer>
         <p>
-          #SaveUSPS by texting <a href="sms:50409?body=USPS">"USPS" to 50409</a> / <a href="https://store.usps.com/store/results/stamps/_/N-9y93lv">Buy stamps</a>
+          #SaveUSPS by texting <a href="sms:50409?body=USPS">"USPS" to 50409</a>{" "}
+          /{" "}
+          <a href="https://store.usps.com/store/results/stamps/_/N-9y93lv">
+            Buy stamps
+          </a>
         </p>
         <p>
-          Data source: <a href="https://represent.us/how-to-vote-2020">RepresentUs</a> / Built by: <a href="https://joshellington.com">Josh Ellington</a>
+          Data source:{" "}
+          <a href="https://represent.us/how-to-vote-2020">RepresentUs</a> /
+          Built by: <a href="https://joshellington.com">Josh Ellington</a>
         </p>
       </footer>
     </Layout>
