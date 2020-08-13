@@ -22,8 +22,8 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "fonts",
-        path: `${__dirname}/src/fonts/`
-      }
+        path: `${__dirname}/src/fonts/`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -36,8 +36,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-canonical-urls",
       options: {
-        siteUrl: targetAddress.href.slice(0, -1)
-      }
+        siteUrl: targetAddress.href.slice(0, -1),
+      },
     },
-  ]
+  ],
 }

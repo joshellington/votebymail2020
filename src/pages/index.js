@@ -38,7 +38,11 @@ const Index = () => {
       <section className="state-selector">
         <form>
           <label htmlFor="state-select">Select a state</label>
-          <select value={currentState} onChange={handleChange}>
+          <select
+            value={currentState}
+            onChange={handleChange}
+            onBlur={handleChange}
+          >
             {Rules.rules.map((s, ind) => {
               return (
                 <option key={s.state} value={s.state}>
@@ -84,10 +88,7 @@ const Index = () => {
                 <dt>Ballot Deadline</dt>
                 <dd
                   dangerouslySetInnerHTML={{
-                    __html: currentRules.ballotDeadline.replace(
-                      /\./g,
-                      ".<br>"
-                    ),
+                    __html: currentRules.ballotDeadline.replace(/\./g, ".<br>"),
                   }}
                 ></dd>
               </dl>
@@ -133,11 +134,10 @@ const Index = () => {
 
       <footer>
         <p>
-          Data source:{" "}
-          <a href="https://represent.us/how-to-vote-2020">RepresentUs</a>
+          #SaveUSPS by texting <a href="sms:50409?body=USPS">"USPS" to 50409</a> / <a href="https://store.usps.com/store/results/stamps/_/N-9y93lv">Buy stamps</a>
         </p>
         <p>
-          Built by: <a href="https://joshellington.com">Josh Ellington</a>
+          Data source: <a href="https://represent.us/how-to-vote-2020">RepresentUs</a> / Built by: <a href="https://joshellington.com">Josh Ellington</a>
         </p>
       </footer>
     </Layout>
