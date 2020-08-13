@@ -11,9 +11,12 @@
     "start": "npm run develop",
     "serve": "GATSBY_ACTIVE_ENV=development gatsby clean && GATSBY_ACTIVE_ENV=development gatsby build && GATSBY_ACTIVE_ENV=development gatsby serve -H 0.0.0.0",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "pullData": "node scripts/pullData.js"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
     "dotenv": "^8.2.0",
     "gatsby": "^2.24.26",
     "gatsby-plugin-canonical-urls": "^2.3.10",

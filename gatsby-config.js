@@ -5,14 +5,16 @@ require("dotenv").config({
   path: `.env.${activeEnv}`,
 })
 
-const targetAddress = new URL(process.env.TARGET_ADDRESS || `https://joshellington.com`);
+const targetAddress = new URL(
+  process.env.TARGET_ADDRESS || `https://votebymail2020.us`
+)
 
 module.exports = {
   siteMetadata: {
-    title: `Josh Ellington`,
-    description: `joshellington.com`,
+    title: `VoteByMail2020.us`,
+    description: `Learn how your state votes by mail in 2020.`,
     author: `@joshellington`,
-    siteUrl: `https://joshellington.com`,
+    siteUrl: `https://votebymail2020.us`,
   },
   plugins: [
     { resolve: `gatsby-plugin-react-helmet` },
